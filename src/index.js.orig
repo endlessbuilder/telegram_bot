@@ -1,0 +1,43 @@
+require("dotenv/config");
+const mongoose = require("mongoose");
+const { runBot } = require("./controller/botController");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const express = require("express");
+const compression = require("compression");
+const config = require("../config");
+
+const routes = require("./routes");
+const { runCron } = require("./controller/gameController");
+
+const app = express();
+app.use(compression());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: "application/json" }));
+app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
+app.use(bodyParser.text({ type: "text/html" }));
+app.use(cors("*"));
+
+app.use(express.static(`${config.DIR}/build`));
+
+app.use("/api/v1/", routes);
+app.get("*", (req, res) => res.sendFile(`${config.DIR}/build/index.html`));
+
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Database is connected");
+<<<<<<< HEAD
+    console.log(encrypt("2aba0db10b2d1539b1f2c6f094fe2c47024bb08d5c930874c418a91a751b519f"));
+=======
+>>>>>>> 897284bcb7e10cb291ef017b4d01fcff0bae4451
+    const port = process.env.PORT || 2002;
+    const http = require("http").createServer(app);
+    http.listen(port);
+    runBot();
+    console.log("Server listening on:", port);
+    runCron();
+  });

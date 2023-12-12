@@ -1,0 +1,15 @@
+{
+  "roles": {
+    "admin": {
+      "title": "admin",
+      "order": 1,
+      "role": 1
+    },
+    "player": {
+      "title": "player",
+      "order": 4,
+      "role": 4
+    }
+  },
+  "depositFee": 15
+}

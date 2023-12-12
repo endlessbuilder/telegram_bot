@@ -1,0 +1,32 @@
+{
+  "BASE_URL": "http://localhost:8000",
+  "payment": {
+    "deposit": "deposit",
+    "withdraw": "withdraw"
+  },
+  "result": {
+    "win": "win",
+    "lose": "lose"
+  },
+  "player_role": {
+    "imposter": "imposter",
+    "crewmate": "crewmate"
+  },
+  "images": {
+    "dm_welcome": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/dm_welcome_imposter.jpg",
+    "imposter_strike": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/imposter_strike.jpg",
+    "imposter_unveiled": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/imposter_unveiled.jpg",
+    "imposter_win": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/imposter_win.jpg",
+    "new_game": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/new_game.jpg",
+    "vote_start": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/vote_start.jpg",
+    "welcome_imposter": "https://mnfkcfbmkjwfskofsywh.supabase.co/storage/v1/object/public/images/welcome_imposter.jpg"
+  },
+  "lynchTime": 30,
+  "killTime": 30,
+  "dayTime": 30,
+  "waitingTime": 120,
+  "minPlayers": 4,
+  "maxPlayers": 10,
+  "winner_fee": 0.9,
+  "gas_limit_gwei": 80
+}
